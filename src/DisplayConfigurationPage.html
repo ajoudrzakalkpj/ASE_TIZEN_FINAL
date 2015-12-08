@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/security.js"></script>
+
+	
+    <link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/DisplayConfigurationPage.js"></script>
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+<body onload = "loadDisplayConfigurationPage()">
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>Raspberry Display Configuration</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+			<table summary="For looks good" align="right">
+				<tr>
+					<td>Current ID:</td>
+					<td id="tbIdentifyUser"></td>
+				</tr>
+				<tr>
+					<td> Server Admin:</td>
+					<td id="tbIdentifyServerAdmin"></td>
+				</tr>
+				<tr>
+					<td> Connection:</td>
+					<td id="tbIdentifySSID"></td>
+				</tr>
+			</table><br>
+			
+			<p>
+				Display List
+			</p>
+			<table summary = "Display Arduino configuration" id="saDisplayConfiguration" border= 1px align="center">
+				
+			</table>
+			<br></br>
+			
+			<div align = "center">
+				<a data-direction="reverse" data-role="button" onclick = "applyConfig()">Apply</a>
+				<a data-direction="reverse" data-role="button" onclick = "moveontonextpage()">Back</a>
+				
+			</div>
+		</div>
+	</div><!-- /page two -->
+	
+</body>
+</html>

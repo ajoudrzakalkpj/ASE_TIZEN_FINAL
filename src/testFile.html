@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+	
+	<script src="../lib/jquery.js"></script>
+	<link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/vis.js"></script>
+  	<link href="../css/vis.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="visualization"></div>
+
+  // DOM element where the Timeline will be attached
+  // Create a DataSet (allows two way data-binding)
+<script type="text/javascript">
+  var container = document.getElementById('visualization');
+
+  var items = new vis.DataSet(
+    [{id:1,content:'TV_Status',start:'2015-11-26 22:25:10.0',end:'2015-11-26 22:27:31.0'},{id:2,content:'TV_Status',start:'2015-11-26 22:29:37.0',end:'2015-11-26 22:31:03.0'}]
+  );
+  var options = {};
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+
+  alert (items.get(1));
+  // Configuration for the Timeline
+
+  // Create a Timeline
+</body>
+</html>

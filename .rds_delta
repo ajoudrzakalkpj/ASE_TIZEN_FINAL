@@ -1,0 +1,13 @@
+#delete
+#add
+res/wgt/js/pbkdf2.js
+res/wgt/js/sha256.js
+#modify
+res/wgt/author-signature.xml
+res/wgt/signature1.xml
+res/wgt/index.html
+res/wgt/js/DisplayConfigurationPage.js
+res/wgt/js/ModifyUserInfo.js
+res/wgt/js/index.js
+res/wgt/js/welcome.js
+res/wgt/src/ModifyUserInfo.html

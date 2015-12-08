@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+	
+	<script src="../lib/jquery.js"></script>
+	<link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/RaspberryInfoCheck.js"></script>
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+<body onload="getraspberryInfo()">
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>Raspberry Register</h1>
+        </div><!-- /header -->
+        
+        <div data-role="content">
+			<table summary="For looks good" align="right">
+				<tr>
+					<td>Current ID:</td>
+					<td id="tbIdentifyUser"></td>
+				</tr>
+				<tr>
+					<td> Server Admin:</td>
+					<td id="tbIdentifyServerAdmin"></td>
+				</tr>
+				<tr>
+					<td> Connection:</td>
+					<td id="tbIdentifySSID"></td>
+				</tr>
+			</table><br></br><br><br>
+			
+			<table summary="Show S/N Information">
+				<tr>
+					<td>S/N:</td>
+					<td width="300px" id="tbSASerialNumber"></td>
+				</tr>
+				<tr>
+					<td>IP:</td>
+					<td width="300px" id="tbSAIPAddress"></td>
+				</tr>
+			</table>							
+			<table summary="Show S/N Information">
+				<tr>
+					<td>ID:</td>
+					<td><input type="text" id="tbGetIDinfo" placeholder="Please type ID Information" /></td>
+				</tr>
+			</table>
+
+				<a id="btGetSAInfo" data-role="button" align = "center" onclick="get_SAInfo()">Get SA Info</a>
+
+			
+			<table summary="Show Connected Sensor Information" id="DisplayingSAInfo" border = "1px" align = "center">
+	
+			</table>
+			
+			<br></br>
+			<div summary ="Align Arduino Node Register Submit" align = "center">
+				<!-- <a id="btArduinoNodeRegister_Submit" data-role="button" onclick="finishRegisterArduinoNode()">Submit</a>  -->
+				<a data-direction="reverse" data-role="button" onclick = "RemoveRaspberryConfiguration()">Remove</a>
+				<a data-direction="reverse" data-role="button" onclick = "previousPage()">Cancel</a>
+			</div>
+			
+		</div> <!-- /content -->
+	</div> <!-- /page two -->
+	
+    
+</body>
+</html>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

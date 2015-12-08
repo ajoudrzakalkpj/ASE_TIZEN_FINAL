@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+	<script src="./lib/jquery.js"></script>
+    <link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/BoardViewPage.js"></script>
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+<body onload="get_PostInfoBySeq_info()">
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>Post Information</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+			<table summary="For looks good" align="right">
+				<tr>
+					<td>Current ID:</td>
+					<td id="tbIdentifyUser"></td>
+				</tr>
+				<tr>
+					<td> Server Admin:</td>
+					<td id="tbIdentifyServerAdmin"></td>
+				</tr>
+				<tr>
+					<td> Connection:</td>
+					<td id="tbIdentifySSID"></td>
+				</tr>
+			</table><br>
+            <p>
+               Title: <input type="text" id="tbBoardSubject" placeholder="Simple text box" />
+            </p>
+            <p>
+               Contents:<textarea id="tbBoardContents" class="textarea-margin" placeholder="Please fill this box"></textarea>
+            </p>
+            <p>
+            	Previous Finished Time setting : <input type="text" id="tbfinishedTimeBefore" placeholder="Simple text box" />
+            </p>
+            <p>
+               	<fieldset data-role="controlgroup" class="choosepet">
+					<legend>Choose a Open Policy:</legend>
+						<input type="radio" name="OpenPolicy-choice" id="OpenPolicy-1" value="PU" checked="checked" />
+							<label for="privilege-1">Public</label><br>
+						<input type="radio" name="OpenPolicy-choice" id="OpenPolicy-2" value="PR"  />
+							<label for="privilege-2">Private</label><br>
+				</fieldset>
+            </p>
+
+            
+            <p>
+            <a id = "btUpdatePost" data-direction="reverse" data-role="button" onclick = "getPostInfoToUpdate()">Update</a>
+            <a id = "btRemovePost" data-direction="reverse" data-role="button" onclick = "RemovePostInfo()">Remove</a>
+            <a data-direction="reverse" data-role="button" onclick = "previousPage()">Cancel</a></p>
+        </div><!-- /content -->
+    </div><!-- /page two -->
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+	<script src="../lib/jquery.js"></script>
+
+	<link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/SystemInfo.js"></script>
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+
+
+<body onload = "systeminfo_list_load()">
+    <!-- Start of first page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>SMART AL System Info</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+		
+			<table summary="For looks good" align="right">
+				<tr>
+					<td>Current ID:</td>
+					<td id="tbIdentifyUser"></td>
+				</tr>
+				<tr>
+					<td> Server Admin:</td>
+					<td id="tbIdentifyServerAdmin"></td>
+				</tr>
+				<tr>
+					<td> Connection:</td>
+					<td id="tbIdentifySSID"></td>
+				</tr>
+			</table><br></br>
+			           
+			<p style="color: blue">New User Registration</p>
+			<table summary="Confirm New User Registration" id="ConfirmationTable" border = "1" align="center">
+				<tbody>
+				</tbody>
+			</table><br>
+			
+			<table summary ="Align status butten" align = "center">
+				<tr>
+					<td><a data-direction="reverse" data-role="button" id="btConfirmationSubmission" onclick="submitConfirmation()">Confirm User</a></td>
+				</tr>
+			</table>
+			
+			<p style="color: blue">My Lifestyle Pattern Analysis</p>
+			<table summary ="Align status butten" align = "center">
+				<tr>
+					<td><a data-direction="reverse" data-role="button" id="btMovePatternPage" onclick="moveOnToPatternAnalysisPage()">Pattern Analysis</a></td>
+				</tr>
+			</table>			
+			
+    	</div><!-- /content -->
+	</div><!-- /page two -->
+	
+	<div data-role="page" id="three">
+        <div data-role="header" data-position="fixed">
+            <h1>User Registration Complete</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            
+            <h2>Confirmation is Complete!!!</h2>
+            
+            <p> </p>
+            
+            <p><a data-direction="reverse" data-role="button" onclick = "previousPage()">Go back to Main Page</a></p>
+        </div><!-- /content -->
+    </div><!-- /page three -->
+
+</body>
+</html>

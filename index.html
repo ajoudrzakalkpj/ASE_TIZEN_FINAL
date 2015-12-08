@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="./js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="./js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="./js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/security.js"></script>
+    <script type="text/javascript" src="./js/pbkdf2.js"></script>
+    <script type="text/javascript" src="./js/sha256.js"></script>
+
+	<script src="./lib/jquery.js"></script>
+    <link rel="stylesheet"  href="./lib/tau/mobile/theme/default/tau.css">
+
+	<script src="./js/index.js"></script>
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body onload="get_initial_info()">
+    <!-- Start of first page: #one -->
+    <div data-role="page" id="one" >
+        <div data-role="header" data-position="fixed">
+            <h1>SMART AL</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <h2>Log in</h2>
+            <p>
+               ID: <input type="text" id="tbLoginId" placeholder="Simple text box" />
+            </p>
+            <p>
+               Password: <input type="password" id="tbLoginPassword" placeholder="Simple text box" />
+            </p>
+			<br></br>
+			<input type="checkbox" name="RememberMe" id="cbRememberMe"/>
+				<label for="cbRememberMe">Remember ID, PW</label><br>
+			<br></br>
+
+            <a id="btLogin"  data-role="button" onclick = "check()">Login</a>
+			<a id="btRegistration" href="#two" data-role="button">Registration</a><br>
+    	</div><!-- /content -->
+	</div><!-- /page one -->
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>User Registration</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+			<p>
+               ID:<input type="text" id="tbRegId" placeholder="Simple text box" />
+               <a id="btnIDCheck" onclick="checkUniqueId()" data-role="button">ID unique check</a>
+            </p>
+            <p>
+               PW: <input type="password" id="tbRegPassword1" placeholder="Simple text box" />
+            </p>
+            <p>
+               Confirm PW: <input type="password" id="tbRegPassword2" placeholder="Simple text box" />
+            </p>
+            <p>
+               Name: <input type="text" id="tbRegName" placeholder="Simple text box" />
+            </p>
+            <div data-role="fieldcontain">
+				<label for="date">Birthdate:</label>
+				<input type="date" name="date" id="Birthdate" value="" />
+            </div>
+            <p>
+               Cell phone: <input type="text" id="tbRegCellPhone" placeholder="Simple text box" />
+            </p>
+            <p>
+				<fieldset data-role="controlgroup" class="choosepet">
+					<legend>Choose a privilege:</legend>
+						<input type="radio" name="privilege-choice" id="privilege-1" value="1" checked="checked" />
+						<label for="privilege-1">Normal User</label><br>
+						<input type="radio" name="privilege-choice" id="privilege-2" value="2"  />
+						<label for="privilege-2">System Admin</label><br>
+				</fieldset>
+            </p>
+            <p>
+               Server Admin: <input type="text" id="tbRegServerAdmin" placeholder="Simple text box" />
+            </p>
+	        <p>
+      	        <a data-direction="reverse" data-role="button" onclick = "registerComplete()">Submit</a>
+        	    <a data-direction="reverse" data-role="button" onclick = "previousPage()">Cancel</a>
+        	</p>
+        </div><!-- /content -->
+    </div><!-- /page two -->
+
+
+
+
+    <!-- Start of second page: #three -->
+    <div data-role="page" id="three">
+        <div data-role="header" data-position="fixed">
+            <h1>User Registration Complete</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            
+            <h2>Registration is Complete!!!</h2>
+            
+            <p> please waiting for confirmation by system administration!!</p>
+            
+            <p><a data-direction="reverse" data-role="button" onclick = "previousPage()">Go back to Main Page</a></p>
+        </div><!-- /content -->
+    </div><!-- /page three -->
+
+</body>
+</html>

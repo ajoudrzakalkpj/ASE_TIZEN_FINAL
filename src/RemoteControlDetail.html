@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+
+	<script type="text/javascript" src="../lib/tau/mobile/js/tau.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery_cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+	<script src="../lib/jquery.js"></script>
+
+	<link rel="stylesheet"  href="../lib/tau/mobile/theme/default/tau.css">
+
+	<script src="../js/SystemInfo.js"></script>
+	<script src="../js/RemoteControlDetail.js"></script>
+	
+
+	<title>TIZEN SMART AL</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+
+
+<body onload = "reservation_page_load()">
+    <!-- Start of first page: #two -->
+    <div data-role="page" id="two">
+        <div data-role="header" data-position="fixed">
+            <h1>Remote Control</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+		
+			<table summary="For looks good" align="right">
+				<tr>
+					<td>Current ID:</td>
+					<td id="tbIdentifyUser"></td>
+				</tr>
+				<tr>
+					<td> Server Admin:</td>
+					<td id="tbIdentifyServerAdmin"></td>
+				</tr>
+				<tr>
+					<td> Connection:</td>
+					<td id="tbIdentifySSID"></td>
+				</tr>
+			</table><br>
+			
+			<table>
+				<tr>
+					<td>
+						S/N:
+					</td>
+					<td>
+						1111111
+					</td>
+				</tr>
+				<tr>
+					<td>
+						ID:
+					</td>
+					<td>
+						Room1
+					</td>
+				</tr>
+			</table>
+			
+			<p>
+				Control
+			</p>
+			
+			<table border = "1px solid" align = "center" >
+				<tr>
+					<td>
+						Sensor
+					</td>
+					<td>
+						Status
+					</td>
+					<td>
+						Switch
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Light
+					</td>
+					<td>
+						On
+					</td>
+					<td>
+						+ -
+					</td>
+				</tr>
+				<tr>
+					<td>
+						TV
+					</td>
+					<td>
+						Off
+					</td>
+					<td>
+						+ -
+					</td>
+				</tr>
+				<tr>
+					<td>
+						TV Channel
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						+ -
+					</td>
+				</tr>
+			</table>
+			
+			<p>
+				Reservation
+			</p>
+			
+			<table border = "1px solid" align = "center">
+				<tr>
+					<td>
+						Type
+					</td>
+					<td>
+						Time
+					</td>
+					<td>
+						Action
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Dropdown
+					</td>
+					<td>
+						Dropdown
+					</td>
+					<td>
+					Dropdown
+					</td>
+				</tr>
+			</table>
+			
+			<br></br>
+			<div summary ="Align Remote Control Setting Button" align = "center">
+				<a id="btRemoteControlSetting" data-role="button" onclick="setTimeRemoteControl()">Submit</a>
+				<a data-direction="reverse" data-role="button" onclick = "previousPage()">Cancel</a>
+			</div>
+		</div><!-- /content -->
+	</div><!-- /page two -->
+		
+		
+    <!-- Start of second page: #three -->
+    <div data-role="page" id="three">
+        <div data-role="header" data-position="fixed">
+            <h1>Reservation Infomation</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            
+            <h2>Reservation is Complete</h2>
+            
+          
+            <p><a data-direction="reverse" data-role="button" onclick = "previousPage()">Go back to Main Page</a></p>
+        </div><!-- /content -->
+    </div><!-- /page three -->
+
+</body>
+</html>
+
+
+
+
